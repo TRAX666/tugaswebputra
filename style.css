@@ -1,0 +1,193 @@
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #FFF8E1; /* kuning lembut */
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border: 3px solid #F57C00; /* oranye tua */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, #FFA000, #F57C00); /* gradasi kuning ke oranye */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 4px solid #E65100;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.header p {
+    margin-top: 6px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background: linear-gradient(180deg, #FFE0B2, #FFCC80); /* kuning lembut */
+    padding: 20px;
+    border-right: 3px solid #FB8C00;
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #E65100;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #BF360C;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #FB8C00;
+    color: #FFF;
+}
+
+/* Konten utama */
+.content {
+    padding: 20px;
+    vertical-align: top;
+    background-color: #FFFDE7; /* kuning muda */
+}
+
+.content h2 {
+    color: #E65100;
+    border-bottom: 3px solid #FFB74D;
+    padding-bottom: 5px;
+}
+
+/* Gambar galeri */
+.gallery-table {
+    width: 100%;
+}
+
+.gallery-img {
+    width: 250px;
+    height: 170px;
+    border-radius: 10px;
+    border: 3px solid #F57C00;
+    transition: transform 0.3s, border-color 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    border-color: #FFB300;
+}
+
+/* Form dan tombol */
+input, textarea {
+    width: 100%;
+    padding: 6px;
+    margin: 4px 0;
+    border-radius: 5px;
+    border: 2px solid #F57C00;
+    background-color: #FFF8E1;
+}
+
+button {
+    background-color: #FB8C00;
+    color: white;
+    border: 2px solid #E65100;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #FFB300;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(90deg, #F57C00, #E65100);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-top: 4px solid #FFB74D;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #FFF3E0;
+    text-decoration: underline;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 136, 0, 0.6); /* oranye transparan */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #FFF3E0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #F57C00;
+}
+
+.close-btn {
+    background-color: #F57C00;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #FFA000;
+}

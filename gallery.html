@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Wisata Depok</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <table class="layout" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2" class="header">
+        <h1>WISATA DEPOK</h1>
+        <p>Galeri Keindahan Alam dan Religi di Kota Depok</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="sidebar" valign="top">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </td>
+      <td class="content" valign="top">
+        <h2>Galeri Wisata Depok</h2>
+        <p>Klik gambar untuk melihat informasi menarik tentang destinasi wisata di Depok.</p>
+        <table class="gallery-table" cellpadding="10" cellspacing="10">
+          <tr align="center">
+            <td>
+              <img src="masjid.jpeg" class="gallery-img" alt="Masjid Kubah Emas" onclick="showPopup('kubah')" />
+              <h3>Masjid Kubah Emas</h3>
+            </td>
+            <td>
+              <img src="kampung.jpeg" class="gallery-img" alt="Kampung 99 Pepohonan" onclick="showPopup('kampung')" />
+              <h3>Kampung 99 Pepohonan</h3>
+            </td>
+            <td>
+              <img src="situ2.jpg" class="gallery-img" alt="Situ Pengasinan" onclick="showPopup('situ')" />
+              <h3>Situ Pengasinan</h3>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="footer">
+        Putra Mahesa (231011400753) | 2025 Wisata Depok | <a href="contact.html">Hubungi Kami</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- POPUP DETAIL -->
+  <div id="popup" class="popup">
+    <div class="popup-content" id="popup-content">
+      <img id="popup-img" src="" alt="Gambar Wisata Depok" />
+      <h2 id="popup-title"></h2>
+      <p id="popup-text"></p>
+      <button class="close-btn" onclick="closePopup()">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup(place) {
+      const popup = document.getElementById("popup");
+      const img = document.getElementById("popup-img");
+      const title = document.getElementById("popup-title");
+      const text = document.getElementById("popup-text");
+
+      if (place === "kubah") {
+        img.src = "masjid.jpeg";
+        title.textContent = "Masjid Kubah Emas";
+        text.textContent = "Masjid Dian Al-Mahri atau Kubah Emas menjadi ikon Depok dengan arsitektur megah berlapis emas dan suasana religius yang menenangkan.";
+      } else if (place === "kampung") {
+        img.src = "kampung.jpeg";
+        title.textContent = "Kampung 99 Pepohonan";
+        text.textContent = "Wisata alam dan edukasi keluarga yang menawarkan udara segar, pohon rindang, dan kegiatan outbond seru.";
+      } else if (place === "situ") {
+        img.src = "situ2.jpg";
+        title.textContent = "Situ Pengasinan";
+        text.textContent = "Danau alami di Depok yang cocok untuk bersantai, naik perahu, dan menikmati keindahan matahari terbenam.";
+      }
+      popup.style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
